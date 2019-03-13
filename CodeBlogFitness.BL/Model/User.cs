@@ -5,6 +5,7 @@ namespace CodeBlogFitness.BL.Model
     /// <summary>
     /// Пользователь.
     /// </summary>
+    [Serializable]
     public class User
     {
              #region Свойства
@@ -56,7 +57,7 @@ namespace CodeBlogFitness.BL.Model
             }
             if(Gender == null)
             {
-                throw new ArgumentNullException("Пол не может быть null.",nameof(gender));
+                
             }
             if(birthDate <DateTime.Parse("01.01.1900")|| birthDate>=DateTime.Now)
             {
